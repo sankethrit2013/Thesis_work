@@ -276,38 +276,13 @@ int main(int argc, char *argv[])
 
 						char labelmapOutput_SM[300];
 						sprintf_s(labelmapOutput_SM, " %sSM_labelmap_registrationOutput.nii", labelmapfolder);
-						/*char labelmapOutput_SM_e1[300];
-						sprintf_s(labelmapOutput_SM_e1, " %sSM_e1_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_SM_e2[300];
-						sprintf_s(labelmapOutput_SM_e2, " %sSM_e2_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_SM_e3[300];
-						sprintf_s(labelmapOutput_SM_e3, " %sSM_e3_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_SM_e4[300];
-						sprintf_s(labelmapOutput_SM_e4, " %sSM_e4_labelmap_registrationOutput.nii", labelmapfolder);*/
 
 						char labelmapOutput_ST[300];
 						sprintf_s(labelmapOutput_ST, " %sST_labelmap_registrationOutput.nii", labelmapfolder);
-						/*char labelmapOutput_ST_e1[300];
-						sprintf_s(labelmapOutput_ST_e1, " %sST_e1_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_ST_e2[300];
-						sprintf_s(labelmapOutput_ST_e2, " %sST_e2_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_ST_e3[300];
-						sprintf_s(labelmapOutput_ST_e3, " %sST_e3_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_ST_e4[300];
-						sprintf_s(labelmapOutput_ST_e4, " %sST_e4_labelmap_registrationOutput.nii", labelmapfolder);*/
 
 						char labelmapOutput_SV[300];
 						sprintf_s(labelmapOutput_SV, " %sSV_labelmap_registrationOutput.nii", labelmapfolder);
-						/*char labelmapOutput_SV_e1[300];
-						sprintf_s(labelmapOutput_SV_e1, " %sSV_e1_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_SV_e2[300];
-						sprintf_s(labelmapOutput_SV_e2, " %sSV_e2_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_SV_e3[300];
-						sprintf_s(labelmapOutput_SV_e3, " %sSV_e3_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_SV_e4[300];
-						sprintf_s(labelmapOutput_SV_e4, " %sSV_e4_labelmap_registrationOutput.nii", labelmapfolder);
-						char labelmapOutput_SV_e5[300];
-						sprintf_s(labelmapOutput_SV_e5, " %sSV_e5_labelmap_registrationOutput.nii", labelmapfolder);*/
+						
 						char labelmapOutput_CA[300];
 						sprintf_s(labelmapOutput_CA, " %sCA_labelmap_registrationOutput.nii", labelmapfolder);
 
@@ -315,60 +290,34 @@ int main(int argc, char *argv[])
 						sprintf_s(labelmapOutput_Comb, " %slabelmap_CL_combined01638_registrationOutput.nii", labelmapfolder);*/
 
 						//label map input
+						/*char labelmapInput_SV[300];
+						sprintf_s(labelmapInput_SV, " %satlasVolume_SV_labelmap.nii", inputfolder);*/
 						char labelmapInput_SV[300];
-						sprintf_s(labelmapInput_SV, " %satlasVolume_SV_labelmap.nii", inputfolder);
-						/*char labelmapInput_SV_e1[300];
-						sprintf_s(labelmapInput_SV_e1, " %satlasVolume_SV_labelmap_e1.nii", inputfolder);
-						char labelmapInput_SV_e2[300];
-						sprintf_s(labelmapInput_SV_e2, " %satlasVolume_SV_labelmap_e2.nii", inputfolder);
-						char labelmapInput_SV_e3[300];
-						sprintf_s(labelmapInput_SV_e3, " %satlasVolume_SV_labelmap_e3.nii", inputfolder);
-						char labelmapInput_SV_e4[300];
-						sprintf_s(labelmapInput_SV_e4, " %satlasVolume_SV_labelmap_e4.nii", inputfolder);
-						char labelmapInput_SV_e5[300];
-						sprintf_s(labelmapInput_SV_e5, " %satlasVolume_SV_labelmap_e5.nii", inputfolder);*/
+						sprintf_s(labelmapInput_SV, " %satlasVolume_SV_labelmap_bspline.nii", inputfolder);
 
+						/*char labelmapInput_ST[300];
+						sprintf_s(labelmapInput_ST, " %satlasVolume_ST_labelmap.nii", inputfolder);*/
 						char labelmapInput_ST[300];
-						sprintf_s(labelmapInput_ST, " %satlasVolume_ST_labelmap.nii", inputfolder);
-						/*char labelmapInput_ST_e1[300];
-						sprintf_s(labelmapInput_ST_e1, " %satlasVolume_ST_labelmap_e1.nii", inputfolder);
-						char labelmapInput_ST_e2[300];
-						sprintf_s(labelmapInput_ST_e2, " %satlasVolume_ST_labelmap_e2.nii", inputfolder);
-						char labelmapInput_ST_e3[300];
-						sprintf_s(labelmapInput_ST_e3, " %satlasVolume_ST_labelmap_e3.nii", inputfolder);
-						char labelmapInput_ST_e4[300];
-						sprintf_s(labelmapInput_ST_e4, " %satlasVolume_ST_labelmap_e4.nii", inputfolder);*/
+						sprintf_s(labelmapInput_ST, " %satlasVolume_ST_labelmap_bspline.nii", inputfolder);
 
+						/*char labelmapInput_SM[300];
+						sprintf_s(labelmapInput_SM, " %satlasVolume_SM_labelmap.nii", inputfolder);*/
 						char labelmapInput_SM[300];
-						sprintf_s(labelmapInput_SM, " %satlasVolume_SM_labelmap.nii", inputfolder);
-						/*char labelmapInput_SM_e1[300];
-						sprintf_s(labelmapInput_SM_e1, " %satlasVolume_SM_labelmap_e1.nii", inputfolder);
-						char labelmapInput_SM_e2[300];
-						sprintf_s(labelmapInput_SM_e2, " %satlasVolume_SM_labelmap_e2.nii", inputfolder);
-						char labelmapInput_SM_e3[300];
-						sprintf_s(labelmapInput_SM_e3, " %satlasVolume_SM_labelmap_e3.nii", inputfolder);
-						char labelmapInput_SM_e4[300];
-						sprintf_s(labelmapInput_SM_e4, " %satlasVolume_SM_labelmap_e4.nii", inputfolder);*/
+						sprintf_s(labelmapInput_SM, " %satlasVolume_SM_labelmap_bspline.nii", inputfolder);
 
+						/*char labelmapInput_SL[300];
+						sprintf_s(labelmapInput_SL, " %satlasVolume_SL_labelmap.nii", inputfolder);*/
 						char labelmapInput_SL[300];
-						sprintf_s(labelmapInput_SL, " %satlasVolume_SL_labelmap.nii", inputfolder);
+						sprintf_s(labelmapInput_SL, " %satlasVolume_SL_labelmap_bspline.nii", inputfolder);
+
+						/*char labelmapInput_CA[300];
+						sprintf_s(labelmapInput_CA, " %sCA_labelmap.nii", inputfolder);*/
 						char labelmapInput_CA[300];
-						sprintf_s(labelmapInput_CA, " %sCA_labelmap.nii", inputfolder);
+						sprintf_s(labelmapInput_CA, " %sCA_labelmap_bspline.nii", inputfolder);
 
 						/*char labelmapInput_Comb[300];
 						sprintf_s(labelmapInput_Comb, " %slabelmap_combined01638.nii", inputfolder);*/
 #pragma endregion
-
-
-
-						//char labelmapInput_SV[300];
-						//sprintf_s(labelmapInput_SV, " %sSV_labelmap_registrationOutput.nii", inputfolder);
-						//char labelmapInput_ST[300];
-						//sprintf_s(labelmapInput_ST, " %sST_labelmap_registrationOutput.nii", inputfolder);
-						//char labelmapInput_SM[300];
-						//sprintf_s(labelmapInput_SM, " %sSM_labelmap_registrationOutput.nii", inputfolder);
-						//char labelmapInput_SL[300];
-						//sprintf_s(labelmapInput_SL, " %sSL_labelmap_registrationOutput.nii", inputfolder);
 
 
 

@@ -365,39 +365,83 @@ int main(int argc, char* argv[])
 	//path_imgSeries[0] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/Calibration_20171011";
 	//filename_fullHead[0] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/Calibration/20171011/Conc100_raw.nii";
 	//filename_ear[0] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/Calibration/20171011/Conc100.nii";
+	///*-------------------------------------------------*/
+	
+	///*-------------------------------------------------*/
+	///*-----------------------------------------------
+	//20171017 series
+	//-------------------------------------------------*/
+	//int numScan = 4; // number of scans
 
+	//std::string *path_imgSeries = new std::string[numScan];
+	//std::string *filename_fullHead = new std::string[numScan];
+	//std::string *filename_ear = new std::string[numScan];
+
+	////baseline / scan1
+	//path_imgSeries[0] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171017/scan1/1.2.826.0.1.3417726.3.570864.20171017150642331";
+	//filename_fullHead[0] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan1/scan1_raw.nii";
+	//filename_ear[0] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan1/scan1.nii";
+
+	////scan 2
+	//path_imgSeries[1] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171017/scan2/1.2.826.0.1.3417726.3.790181.20171017150641722";
+	//filename_fullHead[1] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan2/scan2_raw.nii";
+	//filename_ear[1] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan2/scan2.nii";
+
+	////scan 3
+	//path_imgSeries[2] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171017/scan3/1.2.826.0.1.3417726.3.13422.20171017154128519";
+	//filename_fullHead[2] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan3/scan3_raw.nii";
+	//filename_ear[2] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan3/scan3.nii";
+
+	////scan 4
+	//path_imgSeries[3] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171017/scan4/1.2.826.0.1.3417726.3.412125.20171017160117956";
+	//filename_fullHead[3] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan4/scan4_raw.nii";
+	//filename_ear[3] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan4/scan4.nii";
+
+	///*-------------------------------------------------*/
+
+	/*-------------------------------------------------*/
 	/*-----------------------------------------------
 	20171017 series
 	-------------------------------------------------*/
-	int numScan = 4; // number of scans
+	int numScan = 6; // number of scans
 
 	std::string *path_imgSeries = new std::string[numScan];
 	std::string *filename_fullHead = new std::string[numScan];
 	std::string *filename_ear = new std::string[numScan];
 
 	//baseline / scan1
-	path_imgSeries[0] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171017/scan1/1.2.826.0.1.3417726.3.570864.20171017150642331";
-	filename_fullHead[0] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan1/scan1_raw.nii";
-	filename_ear[0] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan1/scan1.nii";
+	path_imgSeries[0] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171026/scan1/1.2.826.0.1.3417726.3.764447.20171026131023324";
+	filename_fullHead[0] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan1/scan1_raw.nii";
+	filename_ear[0] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan1/scan1.nii";
 
 	//scan 2
-	path_imgSeries[1] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171017/scan2/1.2.826.0.1.3417726.3.790181.20171017150641722";
-	filename_fullHead[1] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan2/scan2_raw.nii";
-	filename_ear[1] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan2/scan2.nii";
+	path_imgSeries[1] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171026/scan2/1.2.826.0.1.3417726.3.981882.20171026134025355";
+	filename_fullHead[1] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan2/scan2_raw.nii";
+	filename_ear[1] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan2/scan2.nii";
 
 	//scan 3
-	path_imgSeries[2] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171017/scan3/1.2.826.0.1.3417726.3.13422.20171017154128519";
-	filename_fullHead[2] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan3/scan3_raw.nii";
-	filename_ear[2] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan3/scan3.nii";
+	path_imgSeries[2] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171026/scan3/1.2.826.0.1.3417726.3.352511.20171026141205589";
+	filename_fullHead[2] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan3/scan3_raw.nii";
+	filename_ear[2] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan3/scan3.nii";
 
 	//scan 4
-	path_imgSeries[3] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171017/scan4/1.2.826.0.1.3417726.3.412125.20171017160117956";
-	filename_fullHead[3] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan4/scan4_raw.nii";
-	filename_ear[3] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan4/scan4.nii";
+	path_imgSeries[3] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171026/scan4/1.2.826.0.1.3417726.3.753296.20171026144249152";
+	filename_fullHead[3] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan4/scan4_raw.nii";
+	filename_ear[3] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan4/scan4.nii";
+
+	//scan 5
+	path_imgSeries[4] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171026/scan5/1.2.826.0.1.3417726.3.880144.20171026155606183";
+	filename_fullHead[4] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan5/scan5_raw.nii";
+	filename_ear[4] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan5/scan5.nii";
+
+	//scan 6 - faulty scan
+	path_imgSeries[5] = "E:/Sanketh_Moudgalya_Directory/Nate/Images/20171026/scan6/1.2.826.0.1.3417726.3.513206.20171026152505527";
+	filename_fullHead[5] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan6/scan6_raw.nii";
+	filename_ear[5] = "E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171026/scan6/scan6.nii";
 
 	/*-------------------------------------------------*/
 
-	for (size_t i = 0; i < 2; i++) //Change to 5 depending on number of scans
+	for (size_t i = 5; i < 6; i++) //Change to 5 depending on number of scans
 	{
 		std::cout << i << std::endl;
 		const char * DicomSeriesDic = path_imgSeries[i].c_str();
@@ -667,15 +711,15 @@ int main(int argc, char* argv[])
 			//size[1] = 260;
 			//size[2] = 268;
 
-			//ROI for 171011 data left ear others
-			ImageType::IndexType start;
-			start[0] = 152;
-			start[1] = 304;
-			start[2] = 115;
-			ImageType::SizeType size;
-			size[0] = 238;
-			size[1] = 188;
-			size[2] = 221;
+			////ROI for 171011 data left ear others
+			//ImageType::IndexType start;
+			//start[0] = 152;
+			//start[1] = 304;
+			//start[2] = 115;
+			//ImageType::SizeType size;
+			//size[0] = 238;
+			//size[1] = 188;
+			//size[2] = 221;
 
 			////ROI for calibration data
 			//ImageType::IndexType start;
@@ -686,6 +730,16 @@ int main(int argc, char* argv[])
 			//size[0] = 37;
 			//size[1] = 36;
 			//size[2] = 225;
+
+			//ROI for 171026 data left ear others. scan 1,2,3,4; scan 5; scan 6
+			ImageType::IndexType start;
+			start[0] = 169;//190; //189 //169
+			start[1] = 360;//386; //389 //360
+			start[2] = 180;//135; //189 //180
+			ImageType::SizeType size;
+			size[0] = 192; //183;
+			size[1] = 182; //154;
+			size[2] = 195; //173;
 
 			
 

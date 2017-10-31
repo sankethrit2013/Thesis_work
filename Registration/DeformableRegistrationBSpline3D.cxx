@@ -101,32 +101,32 @@ int main( int argc, char *argv[] )
 
 #pragma region parameterScan1
   // change from log file - sanketh
-  SimilarityParameters[0] = -0.3779676335977194;
-  SimilarityParameters[1] = 0.24769439373562735;
-  SimilarityParameters[2] = 0.14210947889841852;
-  SimilarityParameters[3] = 1.4095236037303918;
-  SimilarityParameters[4] = -0.027588646471129494;
-  SimilarityParameters[5] = -2.996561745587397;
-  SimilarityParameters[6] = 0.9419431275913199;
-  SCenter[0] = -2.08878;
-  SCenter[1] = -1.74601;
-  SCenter[2] = 1.67028;
+  SimilarityParameters[0] = -0.018570519712191588;
+  SimilarityParameters[1] = -0.0038260363690700897;
+  SimilarityParameters[2] = 0.07280084421522154;
+  SimilarityParameters[3] = -0.2664431362988693;
+  SimilarityParameters[4] = -0.36015435795723477;
+  SimilarityParameters[5] = 0.22954843271829656;
+  SimilarityParameters[6] = 0.965282633860967;
+  SCenter[0] = -2.00214;
+  SCenter[1] = -1.55205;
+  SCenter[2] = 1.67857;
 
-  AffineParameters[0] = 0.9897518434694745;
-  AffineParameters[1] = 0.013269614808004676;
-  AffineParameters[2] = -0.0817812838916443;
-  AffineParameters[3] = -0.08028982253914153;
-  AffineParameters[4] = 0.9965665995940286;
-  AffineParameters[5] = -0.028325718243560925;
-  AffineParameters[6] = 0.030101454247391756;
-  AffineParameters[7] = -0.030104036077441207;
-  AffineParameters[8] = 1.0388392956506565;
-  AffineParameters[9] = 0.004376417456638839;
-  AffineParameters[10] = 0.009748177605253677;
-  AffineParameters[11] = -0.008896799664657892;
-  ACenter[0] = -2.08878;
-  ACenter[1] = -1.74601;
-  ACenter[2] = 1.67028;
+  AffineParameters[0] = 0.9485629222905053;
+  AffineParameters[1] = 0.06871110174135162;
+  AffineParameters[2] = -0.00640578592279396;
+  AffineParameters[3] = 0.0026359840492128353;
+  AffineParameters[4] = 1.0341588561548753;
+  AffineParameters[5] = 0.010372887712632008;
+  AffineParameters[6] = 0.008983963690218226;
+  AffineParameters[7] = -0.02126857634803973;
+  AffineParameters[8] = 1.001568959145986;
+  AffineParameters[9] = -0.012037008765033977;
+  AffineParameters[10] = 0.004438024854140598;
+  AffineParameters[11] = -0.003009373867658991;
+  ACenter[0] = -2.00214;
+  ACenter[1] = -1.55205;
+  ACenter[2] = 1.67857;
 
   //SimilarityParameters[0] = -0.1436948652872146;
   //SimilarityParameters[1] = 0.03157415693267113;

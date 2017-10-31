@@ -271,7 +271,7 @@ int main(int argc, char *argv[])
 
 #pragma region recording
 	ofstream logFile;
-	logFile.open("E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/log.txt", ios::app);
+	logFile.open("E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/log.txt", ios::app);
 
 	time_t rawtime;
 	struct tm * timeinfo;

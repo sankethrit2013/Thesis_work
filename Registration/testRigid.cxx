@@ -8,10 +8,10 @@ using namespace std;
 int main()
 {
 	double translationFactor[] = { 0.1};
-	int iterationsNumber[] = { 100 };
+	int iterationsNumber[] = { 300 };
 	double learningRate[] = { 0.1 };
 	double minimumStepLength[] = { 0.00001 };
-	for (int t = 3; t <= 6; t++)
+	for (int t = 2; t <= 4; t++)
 	{
 		if (t != 1)
 		{
@@ -101,18 +101,32 @@ int main()
 							//sprintf_s(labelmapOutputFolder, " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170606/scan%d/labelmap_deformable_grid10_iter100_fromscan1/", t);
 							///*-----------------------------------------------------------------------------------------------------------------*/
 
+							///*-----------------------------------------------------------------------------------------------------------------*/
+							////20170619 scans
+
+							//char* scansfolder = " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/";
+							//char* baselinefolder = " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/scan1/";
+							//char otherScansFolder[300];
+							//sprintf_s(otherScansFolder, " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/scan%d/", t);
+
+
+							//char* labelmapInputFolder = " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/BSpline/";
+							//char labelmapOutputFolder[300];
+							//sprintf_s(labelmapOutputFolder, " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/scan%d/labelmap_deformable_grid10_iter100_fromscan1/", t);
+							///*-----------------------------------------------------------------------------------------------------------------*/
+
 							/*-----------------------------------------------------------------------------------------------------------------*/
-							//20170619 scans
+							//20171017 scans
 
-							char* scansfolder = " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/";
-							char* baselinefolder = " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/scan1/";
+							char* scansfolder = " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/";
+							char* baselinefolder = " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan1/";
 							char otherScansFolder[300];
-							sprintf_s(otherScansFolder, " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/scan%d/", t);
+							sprintf_s(otherScansFolder, " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan%d/", t);
 
 
-							char* labelmapInputFolder = " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/BSpline/";
+							char* labelmapInputFolder = " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/BSpline/";
 							char labelmapOutputFolder[300];
-							sprintf_s(labelmapOutputFolder, " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20170619/scan%d/labelmap_deformable_grid10_iter100_fromscan1/", t);
+							sprintf_s(labelmapOutputFolder, " E:/Sanketh_Moudgalya_Directory/Nate/ImageVolume/20171017/scan%d/labelmap_deformable_grid10_iter300_fromscan1/", t);
 							/*-----------------------------------------------------------------------------------------------------------------*/
 
 							char fixedImageFile[300];
@@ -121,10 +135,10 @@ int main()
 							sprintf_s(movingImageFile, "%sscan1.nii", baselinefolder);
 
 							char ResampleInputFile[300];
-							sprintf_s(ResampleInputFile, "%sscan1/BSpline_GridNodeinOneDimension10_Iterations100RegistrationOutput.nii", scansfolder);
+							sprintf_s(ResampleInputFile, "%sscan1/BSpline_GridNodeinOneDimension10_Iterations300RegistrationOutput.nii", scansfolder);
 							//sprintf_s(ResampleInputFile, "%sscan1/BSpline_GridNodeinOneDimension10_Iterations100RegistrationOutput.nii", scansfolder);
 							char ResampleOutputFile[300];
-							sprintf_s(ResampleOutputFile, "%sscan%d/BSpline_fromScan1_GridNodeinOneDimension10_Iterations100RegistrationOutput.nii", scansfolder, t);
+							sprintf_s(ResampleOutputFile, "%sscan%d/BSpline_fromScan1_GridNodeinOneDimension10_Iterations300RegistrationOutput.nii", scansfolder, t);
 							//sprintf_s(ResampleOutputFile, "%sscan%d/BSpline_fromScan1_GridNodeinOneDimension10_Iterations100_RegistrationOutput.nii", scansfolder, t);
 							//sprintf_s(ResampleOutputFile, "%sRegistrationOutput.nii", scansfolder);
 
@@ -134,88 +148,37 @@ int main()
 
 							char differenceAfterFile_scan2atlas[300];
 							/*sprintf_s(differenceAfterFile_scan2atlas, "%sscan%d/BSpline_fromScan1_GridNodeinOneDimension8_Iterations50_differenceAfterRegistration.nii", scansfolder, t);*/
-							sprintf_s(differenceAfterFile_scan2atlas, "%sscan%d/BSpline_fromScan1_GridNodeinOneDimension10_Iterations100_differenceAfterRegistration.nii", scansfolder, t);
+							sprintf_s(differenceAfterFile_scan2atlas, "%sscan%d/BSpline_fromScan1_GridNodeinOneDimension10_Iterations300_differenceAfterRegistration.nii", scansfolder, t);
 
 							char parameter[50];
 							sprintf_s(parameter, " %g %d %g %g", translationFactor[i], iterationsNumber[k], learningRate[j], minimumStepLength[l]);
 #pragma region labelMapFileName
 							//label map output
 							char labelmapOutput_SL[300];
-							sprintf_s(labelmapOutput_SL, " %sSL_labelmap_registrationOutput.nii", labelmapOutputFolder);
+							sprintf_s(labelmapOutput_SL, " %sSL_labelmap_Iter%d_registrationOutput.nii", labelmapOutputFolder, iterationsNumber[k]);
 
 							char labelmapOutput_SM[300];
-							sprintf_s(labelmapOutput_SM, " %sSM_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							/*char labelmapOutput_SM_e1[300];
-							sprintf_s(labelmapOutput_SM_e1, " %sSM_e1_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_SM_e2[300];
-							sprintf_s(labelmapOutput_SM_e2, " %sSM_e2_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_SM_e3[300];
-							sprintf_s(labelmapOutput_SM_e3, " %sSM_e3_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_SM_e4[300];
-							sprintf_s(labelmapOutput_SM_e4, " %sSM_e4_labelmap_registrationOutput.nii", labelmapOutputFolder);*/
+							sprintf_s(labelmapOutput_SM, " %sSM_labelmap_Iter%d_registrationOutput.nii", labelmapOutputFolder, iterationsNumber[k]);
 
 							char labelmapOutput_ST[300];
-							sprintf_s(labelmapOutput_ST, " %sST_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							/*char labelmapOutput_ST_e1[300];
-							sprintf_s(labelmapOutput_ST_e1, " %sST_e1_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_ST_e2[300];
-							sprintf_s(labelmapOutput_ST_e2, " %sST_e2_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_ST_e3[300];
-							sprintf_s(labelmapOutput_ST_e3, " %sST_e3_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_ST_e4[300];
-							sprintf_s(labelmapOutput_ST_e4, " %sST_e4_labelmap_registrationOutput.nii", labelmapOutputFolder);*/
-
+							sprintf_s(labelmapOutput_ST, " %sST_labelmap_Iter%d_registrationOutput.nii", labelmapOutputFolder, iterationsNumber[k]);
+							
 							char labelmapOutput_SV[300];
-							sprintf_s(labelmapOutput_SV, " %sSV_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							/*char labelmapOutput_SV_e1[300];
-							sprintf_s(labelmapOutput_SV_e1, " %sSV_e1_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_SV_e2[300];
-							sprintf_s(labelmapOutput_SV_e2, " %sSV_e2_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_SV_e3[300];
-							sprintf_s(labelmapOutput_SV_e3, " %sSV_e3_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_SV_e4[300];
-							sprintf_s(labelmapOutput_SV_e4, " %sSV_e4_labelmap_registrationOutput.nii", labelmapOutputFolder);
-							char labelmapOutput_SV_e5[300];
-							sprintf_s(labelmapOutput_SV_e5, " %sSV_e5_labelmap_registrationOutput.nii", labelmapOutputFolder);*/
-
+							sprintf_s(labelmapOutput_SV, " %sSV_labelmap_Iter%d_registrationOutput.nii", labelmapOutputFolder, iterationsNumber[k]);
+							
 							//label map input
 							char labelmapInput_SL[300];
-							sprintf_s(labelmapInput_SL, " %slabelmap_Deformable_Grid10_Iter100SL_labelmap_registrationOutput.nii", labelmapInputFolder);
+							sprintf_s(labelmapInput_SL, " %slabelmap_Deformable_Grid10_Iter300SL_labelmap_registrationOutput.nii", labelmapInputFolder);
 
 							char labelmapInput_SM[300];
-							sprintf_s(labelmapInput_SM, " %slabelmap_Deformable_Grid10_Iter100SM_labelmap_registrationOutput.nii", labelmapInputFolder);
-							/*char labelmapInput_SM_e1[300];
-							sprintf_s(labelmapInput_SM_e1, " %slabelmap_Deformable_Grid10_Iter150SM_e1_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_SM_e2[300];
-							sprintf_s(labelmapInput_SM_e2, " %slabelmap_Deformable_Grid10_Iter150SM_e2_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_SM_e3[300];
-							sprintf_s(labelmapInput_SM_e3, " %slabelmap_Deformable_Grid10_Iter150SM_e3_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_SM_e4[300];
-							sprintf_s(labelmapInput_SM_e4, " %slabelmap_Deformable_Grid10_Iter150SM_e4_labelmap_registrationOutput.nii", labelmapInputFolder);*/
-
+							sprintf_s(labelmapInput_SM, " %slabelmap_Deformable_Grid10_Iter300SM_labelmap_registrationOutput.nii", labelmapInputFolder);
+							
 							char labelmapInput_ST[300];
-							sprintf_s(labelmapInput_ST, " %slabelmap_Deformable_Grid10_Iter100ST_labelmap_registrationOutput.nii", labelmapInputFolder);
-							/*char labelmapInput_ST_e1[300];
-							sprintf_s(labelmapInput_ST_e1, " %slabelmap_Deformable_Grid10_Iter150ST_e1_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_ST_e2[300];
-							sprintf_s(labelmapInput_ST_e2, " %slabelmap_Deformable_Grid10_Iter150ST_e2_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_ST_e3[300];
-							sprintf_s(labelmapInput_ST_e3, " %slabelmap_Deformable_Grid10_Iter150ST_e3_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_ST_e4[300];
-							sprintf_s(labelmapInput_ST_e4, " %slabelmap_Deformable_Grid10_Iter150ST_e4_labelmap_registrationOutput.nii", labelmapInputFolder);*/
-
+							sprintf_s(labelmapInput_ST, " %slabelmap_Deformable_Grid10_Iter300ST_labelmap_registrationOutput.nii", labelmapInputFolder);
+							
 							char labelmapInput_SV[300];
-							sprintf_s(labelmapInput_SV, " %slabelmap_Deformable_Grid10_Iter100SV_labelmap_registrationOutput.nii", labelmapInputFolder);
-							/*char labelmapInput_SV_e1[300];
-							sprintf_s(labelmapInput_SV_e1, " %slabelmap_Deformable_Grid10_Iter150SV_e1_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_SV_e2[300];
-							sprintf_s(labelmapInput_SV_e2, " %slabelmap_Deformable_Grid10_Iter150SV_e2_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_SV_e3[300];
-							sprintf_s(labelmapInput_SV_e3, " %slabelmap_Deformable_Grid10_Iter150SV_e3_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_SV_e4[300];
-							sprintf_s(labelmapInput_SV_e4, " %slabelmap_Deformable_Grid10_Iter150SV_e4_labelmap_registrationOutput.nii", labelmapInputFolder);
-							char labelmapInput_SV_e5[300];
-							sprintf_s(labelmapInput_SV_e5, " %slabelmap_Deformable_Grid10_Iter150SV_e5_labelmap_registrationOutput.nii", labelmapInputFolder);*/
+							sprintf_s(labelmapInput_SV, " %slabelmap_Deformable_Grid10_Iter300SV_labelmap_registrationOutput.nii", labelmapInputFolder);
+							
 #pragma endregion
 							char command[8000] = "";
 
@@ -236,35 +199,6 @@ int main()
 							strcat_s(command, labelmapOutput_SM);
 							strcat_s(command, labelmapInput_SL);
 							strcat_s(command, labelmapOutput_SL);
-
-							/*strcat_s(command, labelmapInput_SV_e1);
-							strcat_s(command, labelmapOutput_SV_e1);
-							strcat_s(command, labelmapInput_SV_e2);
-							strcat_s(command, labelmapOutput_SV_e2);
-							strcat_s(command, labelmapInput_SV_e3);
-							strcat_s(command, labelmapOutput_SV_e3);
-							strcat_s(command, labelmapInput_SV_e4);
-							strcat_s(command, labelmapOutput_SV_e4);
-							strcat_s(command, labelmapInput_SV_e5);
-							strcat_s(command, labelmapOutput_SV_e5);
-
-							strcat_s(command, labelmapInput_ST_e1);
-							strcat_s(command, labelmapOutput_ST_e1);
-							strcat_s(command, labelmapInput_ST_e2);
-							strcat_s(command, labelmapOutput_ST_e2);
-							strcat_s(command, labelmapInput_ST_e3);
-							strcat_s(command, labelmapOutput_ST_e3);
-							strcat_s(command, labelmapInput_ST_e4);
-							strcat_s(command, labelmapOutput_ST_e4);
-
-							strcat_s(command, labelmapInput_SM_e1);
-							strcat_s(command, labelmapOutput_SM_e1);
-							strcat_s(command, labelmapInput_SM_e2);
-							strcat_s(command, labelmapOutput_SM_e2);
-							strcat_s(command, labelmapInput_SM_e3);
-							strcat_s(command, labelmapOutput_SM_e3);
-							strcat_s(command, labelmapInput_SM_e4);
-							strcat_s(command, labelmapOutput_SM_e4);*/
 
 							cout << command << endl;
 							std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
